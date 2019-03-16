@@ -7,48 +7,64 @@
 
     <title>Friend Finder</title>
 
-    <!-- Bootstrap CSS -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 
     <!-- JQuery -->
-    <!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 
-    <!-- Project-specific style sheet
-    <link rel="stylesheet" type="text/css" href="style.css"> -->
 
 </head>
 
 <body>
+    <h1>Survey Questions</h1>
 
-    <h1>Survey Page</h1>
-
-
-    <button type="submit" id="friendSubmit">Submit</button>
+    <div>
+        Enter your name: <input type="text" id="name"> <br />
+        What is your age: <input type="text" id="age"><br />
+        What is your gender: <input type="text" id="gender"><br />
+        <br />
+        <a href="#" id="friendSubmit">Submit</a>
+        <br /><br />
+    </div>
 
     <div>
         <a href="/api/friends">Friends list</a>
     </div>
 
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+
+
+        
     <script type="text/javascript">
         $("#friendSubmit").on("click", function (event) {
             console.log("right here");
             event.preventDefault();
-
-            var newFriend = [{"name": "Qqqqqq", "age": 22, "gender": "Female"}];
+            var newName = $("#name").val();
+            var newAge = $("#age").val();
+            var newGender = $("#gender").val();
+            console.log(newName, newAge, newGender);
+            var newFriend = {"name": newName, "age": newAge, "gender": newGender};
             console.log (newFriend);
 
-            $.post("/api/friends", newFriend, function(data) {
-                if (data) {
+            $.post("/api/friends", newFriend, function(result) {
+                console.log("result=" + result);
+                if (result) {
                     alert("success");
                 } else {
                     alert("failed");
                 };
+                $("#name").val("");
+                $("#age").val("");
+                $("#gender").val("");
+                
             });
         });
     </script>
@@ -58,15 +74,7 @@
     <!-- <script src="assets/javascript/projectscript.js"></script> -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    
 
 </body>
 

@@ -8,73 +8,294 @@
     <title>Friend Finder</title>
 
 
-    <!-- JQuery -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-    <h1>Survey Questions</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1">
+                <!-- blank -->
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Survey Questions:</h1>
+                    </div>
+                </div>
 
-    <div>
-        Enter your name: <input type="text" id="name"> <br />
-        What is your age: <input type="text" id="age"><br />
-        What is your gender: <input type="text" id="gender"><br />
-        <br />
-        <a href="#" id="friendSubmit">Submit</a>
-        <br /><br />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>About You:</h2>
+                        Name (Required):<br />
+                        <input type="text" id="name" size="122"><br />
+                        Link to Photo Image (Required):<br />
+                        <input type="text" id="image" size="122">
+                        <br /><br />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <h2>Question 1:</h2>
+                        <p>I make friends easily</p>
+                        <select class="chosen-select" id="Question1">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 2:</h2>
+                        <p>I love large parties</p>
+                        <select class="chosen-select" id="Question2">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 3:</h2>
+                        <p>I worry about things</p>
+                        <select class="chosen-select" id="Question3">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 4:</h2>
+                        <p>I prefer to be in charge of most situations</p>
+                        <select class="chosen-select" id="Question4">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 5:</h2>
+                        <p>I prefer variety to routine</p>
+                        <select class="chosen-select" id="Question5">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 6:</h2>
+                        <p>I trust others</p>
+                        <select class="chosen-select" id="Question6">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 7:</h2>
+                        <p>I dislike being the center of attention</p>
+                        <select class="chosen-select" id="Question7">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 8:</h2>
+                        <p>I like my house to be clean</p>
+                        <select class="chosen-select" id="Question8">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 9:</h2>
+                        <p>I get chores done right away</p>
+                        <select class="chosen-select" id="Question9">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                        <h2>Question 10:</h2>
+                        <p>I seek adventure</p>
+                        <select class="chosen-select" id="Question10">
+                            <option value></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br /><br />
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary btn-block" id="submit">Submit</button>
+
+                        <!-- <a href="#" id="friendSubmit">Submit</a>
+                        <a href="/api/friends">Friends list</a> -->
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-1">
+                <!-- blank -->
+            </div>
+        </div>
     </div>
 
-    <div>
-        <a href="/api/friends">Friends list</a>
+
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Best Match:</p>
+            <p id="bestMatchName"></p>
+            <p id="bestMatchImage"></p>
+        </div>
+    
     </div>
 
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script> -->
 
 
-        
     <script type="text/javascript">
-        $("#friendSubmit").on("click", function (event) {
-            console.log("right here");
+        $("#submit").on("click", function (event) {
+            console.log("in submit");
             event.preventDefault();
-            var newName = $("#name").val();
-            var newAge = $("#age").val();
-            var newGender = $("#gender").val();
-            console.log(newName, newAge, newGender);
-            var newFriend = {"name": newName, "age": newAge, "gender": newGender};
-            console.log (newFriend);
+            var name = $("#name").val();
+            var image = $("#image").val();
+            var Q1 = $("#Question1").val();
+            var Q2 = $("#Question2").val();
+            var Q3 = $("#Question3").val();
+            var Q4 = $("#Question4").val();
+            var Q5 = $("#Question5").val();
+            var Q6 = $("#Question6").val();
+            var Q7 = $("#Question7").val();
+            var Q8 = $("#Question8").val();
+            var Q9 = $("#Question9").val();
+            var Q10 = $("#Question10").val();
+            // var responses = [name, image, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
 
-            $.post("/api/friends", newFriend, function(result) {
-                console.log("result=" + result);
-                if (result) {
+            // var responses = `{name: "${name}", image: "${image}", Q1: ${Q1}, Q2: ${Q2}, Q3: ${Q3}, Q4: ${Q4}, Q5: ${Q5}, Q6: ${Q6}, Q7: ${Q7}, Q8: ${Q8}, Q9: ${Q9}, Q10: ${Q10}}`;
+            var responses = {
+                name: "'" + name + "'",
+                image: "'" + image + "'",
+                Q1: parseInt(Q1),
+                Q2: parseInt(Q2),
+                Q3: parseInt(Q3),
+                Q4: parseInt(Q4),
+                Q5: parseInt(Q5),
+                Q6: parseInt(Q6),
+                Q7: parseInt(Q7),
+                Q8: parseInt(Q8),
+                Q9: parseInt(Q9),
+                Q10: parseInt(Q10)
+            };
+            console.log("responses :" + responses);
+
+
+            $.post("/api/friends", responses, function(result) {
+                if (result.match) {
                     alert("success");
                 } else {
                     alert("failed");
                 };
                 $("#name").val("");
-                $("#age").val("");
-                $("#gender").val("");
+                $("#image").val("");
+                $("#Question1").val("");
+                $("#Question2").val("");
+                $("#Question3").val("");
+                $("#Question4").val("");
+                $("#Question5").val("");
+                $("#Question6").val("");
+                $("#Question7").val("");
+                $("#Question8").val("");
+                $("#Question9").val("");
+                $("#Question10").val("");
+                
+                // Get the modal
+                var modal = $("#myModal")[0];
+
+                // Get the button that opens the modal
+                // var btn = $("#myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = $(".close")[0];
+
+                // When the user clicks on the button, open the modal 
+                // btn.onclick = function () {
+
+                $("#bestMatchName").text(result.name);
+                $("#bestMatchImage").text(result.image);
+                //  <img class="choiceImg" id="image2" src="assets/images/rock.jpg" alt="choice">
+                // $("#image1").attr("src", "assets/images/rock.jpg")
+                modal.style.display = "block";
+                // }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                };
                 
             });
         });
+
     </script>
 
 
-    <!-- Project-specific javascript file -->
-    <!-- <script src="assets/javascript/projectscript.js"></script> -->
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    
 
 </body>
 

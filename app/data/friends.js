@@ -1,7 +1,7 @@
 var friends = [
     {
-        name: "Aaaaa",
-        image: "aaaa",
+        name: "Buggs",
+        image: "../images/buggs.jpg",
         Q1:1,
         Q2:2,
         Q3:3,

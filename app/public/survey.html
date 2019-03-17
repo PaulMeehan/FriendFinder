@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-1">
@@ -39,6 +40,10 @@
                         Link to Photo Image (Required):<br />
                         <input type="text" id="image" size="122">
                         <br /><br />
+                        
+                        <!-- <img src="..\images\buggs.jpg" alt="picture not found"> -->
+                        <img src="buggs.jpg" alt="No picture available">
+
                     </div>
                 </div>
 
@@ -197,7 +202,7 @@
             <span class="close">&times;</span>
             <p>Best Match:</p>
             <p id="bestMatchName"></p>
-            <p id="bestMatchImage"></p>
+            <img id="bestMatchImage" alt="picture not found" src="C:\Paul\BootCamp\GitHub\FriendFinder\app\images\buggs.jpg"/>
         </div>
     
     </div>
@@ -207,6 +212,7 @@
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
             console.log("in submit");
+
             event.preventDefault();
             var name = $("#name").val();
             var image = $("#image").val();
@@ -240,7 +246,7 @@
             console.log("responses :" + responses);
 
 
-            $.post("/api/friends", responses, function(result) {
+            $.post("/api/friends", responses, function (result) {
                 if (result.match) {
                     alert("success");
                 } else {
@@ -258,7 +264,7 @@
                 $("#Question8").val("");
                 $("#Question9").val("");
                 $("#Question10").val("");
-                
+
                 // Get the modal
                 var modal = $("#myModal")[0];
 
@@ -272,9 +278,7 @@
                 // btn.onclick = function () {
 
                 $("#bestMatchName").text(result.name);
-                $("#bestMatchImage").text(result.image);
-                //  <img class="choiceImg" id="image2" src="assets/images/rock.jpg" alt="choice">
-                // $("#image1").attr("src", "assets/images/rock.jpg")
+                // $("#bestMatchImage").attr("src", result.image);
                 modal.style.display = "block";
                 // }
 
@@ -289,11 +293,12 @@
                         modal.style.display = "none";
                     }
                 };
-                
+
             });
         });
 
     </script>
+
 
 
 

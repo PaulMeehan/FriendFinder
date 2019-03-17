@@ -41,9 +41,6 @@
                         <input type="text" id="image" size="122">
                         <br /><br />
                         
-                        <!-- <img src="..\images\buggs.jpg" alt="picture not found"> -->
-                        <img src="buggs.jpg" alt="No picture available">
-
                     </div>
                 </div>
 
@@ -177,9 +174,6 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <button type="button" class="btn btn-primary btn-block" id="submit">Submit</button>
-
-                        <!-- <a href="#" id="friendSubmit">Submit</a>
-                        <a href="/api/friends">Friends list</a> -->
                     </div>
                 </div>
                 
@@ -191,9 +185,6 @@
     </div>
 
 
-    <!-- Trigger/Open The Modal -->
-    <!-- <button id="myBtn">Open Modal</button> -->
-    
     <!-- The Modal -->
     <div id="myModal" class="modal">
     
@@ -202,7 +193,8 @@
             <span class="close">&times;</span>
             <p>Best Match:</p>
             <p id="bestMatchName"></p>
-            <img id="bestMatchImage" alt="picture not found" src="C:\Paul\BootCamp\GitHub\FriendFinder\app\images\buggs.jpg"/>
+            <p id="score"></p>
+            <img id="bestMatchImage" alt="picture not found" src=imageFile>
         </div>
     
     </div>
@@ -211,7 +203,6 @@
 
     <script type="text/javascript">
         $("#submit").on("click", function (event) {
-            console.log("in submit");
 
             event.preventDefault();
             var name = $("#name").val();
@@ -226,9 +217,7 @@
             var Q8 = $("#Question8").val();
             var Q9 = $("#Question9").val();
             var Q10 = $("#Question10").val();
-            // var responses = [name, image, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
 
-            // var responses = `{name: "${name}", image: "${image}", Q1: ${Q1}, Q2: ${Q2}, Q3: ${Q3}, Q4: ${Q4}, Q5: ${Q5}, Q6: ${Q6}, Q7: ${Q7}, Q8: ${Q8}, Q9: ${Q9}, Q10: ${Q10}}`;
             var responses = {
                 name: "'" + name + "'",
                 image: "'" + image + "'",
@@ -243,7 +232,6 @@
                 Q9: parseInt(Q9),
                 Q10: parseInt(Q10)
             };
-            console.log("responses :" + responses);
 
 
             $.post("/api/friends", responses, function (result) {
@@ -268,19 +256,13 @@
                 // Get the modal
                 var modal = $("#myModal")[0];
 
-                // Get the button that opens the modal
-                // var btn = $("#myBtn");
-
                 // Get the <span> element that closes the modal
                 var span = $(".close")[0];
 
-                // When the user clicks on the button, open the modal 
-                // btn.onclick = function () {
-
                 $("#bestMatchName").text(result.name);
-                // $("#bestMatchImage").attr("src", result.image);
+                $("#score").text("with a score of " + result.score);
+                $("#bestMatchImage").attr("src", result.image);
                 modal.style.display = "block";
-                // }
 
                 // When the user clicks on <span> (x), close the modal
                 span.onclick = function () {

@@ -1,5 +1,6 @@
 const friendsData = require("../data/friends.js");
 
+const path = require("path");
 
 module.exports = function(app) {
 
@@ -28,7 +29,6 @@ module.exports = function(app) {
 
 
     app.post ("/api/friends", function(request, response) {
-        console.log("request.body=" + request.body);
 
         var newFriend = objectToArray(request.body);
         var minScore = 41;
@@ -47,12 +47,11 @@ module.exports = function(app) {
             };
         };
 
-        console.log("closest match = " + friendsData[bestMatch].name)
-
         friendsData.push(request.body);
 
+        var imageFile = path.join(__dirname, "../images/") + friendsData[bestMatch].image;
+        console.log("image file = " + imageFile);
 
-
-        response.json({ match: true, name: friendsData[bestMatch].name, image: friendsData[bestMatch].image});
+        response.json({ match: true, score: minScore, name: friendsData[bestMatch].name, image: imageFile});
     });
 };

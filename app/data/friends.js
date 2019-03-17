@@ -1,7 +1,7 @@
 var friends = [
     {
         name: "Buggs",
-        image: "../images/buggs.jpg",
+        image: "buggs.jpg",
         Q1:1,
         Q2:2,
         Q3:3,
@@ -14,8 +14,8 @@ var friends = [
         Q10:5
     },
     {
-        name: "Bbbbbb",
-        image: "bbbbb",
+        name: "Daffy",
+        image: "daffy.jpg",
         Q1:1,
         Q2:2,
         Q3:3,
@@ -28,8 +28,8 @@ var friends = [
         Q10:1
     },
     {
-        name: "Ccccc",
-        image: "ccccc",
+        name: "Elmer",
+        image: "elmer.jpg",
         Q1:1,
         Q2:2,
         Q3:1,
@@ -42,8 +42,8 @@ var friends = [
         Q10:2
     },
     {
-        name: "Ddddd",
-        image: "dddd",
+        name: "Foghorn",
+        image: "foghorn.jpg",
         Q1:3,
         Q2:2,
         Q3:1,
@@ -56,8 +56,8 @@ var friends = [
         Q10:3
     },
     {
-        name: "Eeeee",
-        image: "eeee",
+        name: "Marvin",
+        image: "marvin.png",
         Q1:5,
         Q2:4,
         Q3:2,
@@ -70,8 +70,8 @@ var friends = [
         Q10:5
     },
     {
-        name: "Fffff",
-        image: "fffff",
+        name: "Porky",
+        image: "porky.png",
         Q1:4,
         Q2:2,
         Q3:4,
@@ -84,8 +84,8 @@ var friends = [
         Q10:2
     },
     {
-        name: "Ggggg",
-        image: "ggggg",
+        name: "Sam",
+        image: "sam.png",
         Q1:4,
         Q2:1,
         Q3:5,
@@ -98,8 +98,8 @@ var friends = [
         Q10:4
     },
     {
-        name: "Hhhhhh",
-        image: "hhhhhhh",
+        name: "Sylvester",
+        image: "sylvester.png",
         Q1:5,
         Q2:1,
         Q3:5,
@@ -112,8 +112,8 @@ var friends = [
         Q10:1
     },
     {
-        name: "Iiiiii",
-        image: "iiiii",
+        name: "Taz",
+        image: "taz.jpg",
         Q1:2,
         Q2:5,
         Q3:2,
@@ -126,8 +126,8 @@ var friends = [
         Q10:5
     },
     {
-        name: "Jjjjjj",
-        image: "jjjjj",
+        name: "Tweety",
+        image: "tweety.png",
         Q1:3,
         Q2:2,
         Q3:5,

@@ -49,7 +49,7 @@ module.exports = function(app) {
 
         friendsData.push(request.body);
 
-        var imageFile = path.join(__dirname, "../images/") + friendsData[bestMatch].image;
+        var imageFile = "images/" + friendsData[bestMatch].image;
         console.log("image file = " + imageFile);
 
         response.json({ match: true, score: minScore, name: friendsData[bestMatch].name, image: imageFile});

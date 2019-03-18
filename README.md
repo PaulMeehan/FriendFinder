@@ -8,7 +8,9 @@ This application is an example of a dating web site, matching the user with a kn
 
 **User instructions:**
 
-   A video of how to use this site is available [by clicking here](URL)
+   A video of how to use this site is available [by clicking here](https://drive.google.com/file/d/1cOvl5DUSh4Bj8wpCT0tWGs-KYhlA_poH/view)
+
+   The application can also be run directly from Heroku [by clicking here](https://ancient-mountain-99945.herokuapp.com/).
 
 **Technical information:**
 
@@ -25,5 +27,6 @@ This application is an example of a dating web site, matching the user with a kn
         3. Start the application by entering the following in a terminal window:
             node server
 
-        4. Open a browser and enter the command:
+        4. Open a browser and enter the URL:
+            localhost:8080/home
             
